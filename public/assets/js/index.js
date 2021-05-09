@@ -104,8 +104,8 @@ const handleNoteView = (e) => {
 // Sets the activeNote to and empty object and allows the user to enter a new note
 const handleNewNoteView = (e) => {
   //added two lines below -Jack
-  noteTitle.setAttribute('readonly', false);
-  noteText.setAttribute('readonly', false);
+  // noteTitle.setAttribute('readonly', false);
+  // noteText.setAttribute('readonly', false);
   //
   activeNote = {};
   renderActiveNote();
