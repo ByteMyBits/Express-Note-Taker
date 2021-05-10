@@ -13,11 +13,14 @@ module.exports = (app) => {
         res.sendFile(path.join(__dirname, './public/notes.html'));
     });
 
-    app.get('/api/notes', (req, res) => res.json(database));
+    app.get('/api/notes', (req, res) => {
+        res.sendFile(path.join(__dirname, './db/db.json'));
+
+    });
 
     app.post('/api/notes', (req, res) => {
 
-        fs.readFile('/db/db.json', 'utf8', (err, data) => {
+        fs.readFile('./db/db.json', 'utf8', (err, data) => {
             if (err) {
                 console.error(err);
                 return;
